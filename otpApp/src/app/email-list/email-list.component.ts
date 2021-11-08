@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Email } from '../model/email';
+
+import { Check } from '../model/check';
 import { UserService } from '../service/user-service.service';
 @Component({
   selector: 'app-email-list',
@@ -9,14 +11,14 @@ import { UserService } from '../service/user-service.service';
 })
 export class EmailListComponent implements OnInit {
 
-  email: Email[]=[];
-
+  check :Check= new Check();
   constructor(private userService: UserService) {
   }
 
   ngOnInit() {
-    this.userService.findAll().subscribe(data => {
-      this.email = data;
+    this.userService.get().subscribe(data => {
+      this.check = data;
+      console.log(this.check);
     });
   }
 

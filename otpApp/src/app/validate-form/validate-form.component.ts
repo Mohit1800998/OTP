@@ -11,6 +11,7 @@ export class ValidateFormComponent  {
 
   
   user: Validate;
+  check:string='';
 
   constructor(
     private route: ActivatedRoute, 
@@ -24,7 +25,7 @@ export class ValidateFormComponent  {
   }
 
   gotoUserList() {
-    this.router.navigate(['/validate']);
+    this.router.navigate(['/emails']);
   }
 
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../service/user-service.service';
 import { Email } from '../model/email';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <== add the imports!
  
 @Component({
   selector: 'app-email-form',

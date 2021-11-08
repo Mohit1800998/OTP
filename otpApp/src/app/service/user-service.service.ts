@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Email } from '../model/email';
+
+import { Check } from '../model/check';
 import { Validate } from '../model/validate'
 import { Observable, Subject, asapScheduler, pipe, of, from, interval, merge, fromEvent } from 'rxjs';
 @Injectable()
@@ -13,8 +15,8 @@ export class UserService{
     this.emailUrl1 = 'http://localhost:8081/validate';
   }
 
-  public findAll(): Observable<Email[]> {
-    return this.http.get<Email[]>(this.emailUrl);
+  public get(): Observable<Check> {
+    return this.http.get<Check>(`${this.emailUrl}`);
   }
 
   public validate(validate: Validate){
