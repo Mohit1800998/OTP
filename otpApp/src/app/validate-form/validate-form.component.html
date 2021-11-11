@@ -21,8 +21,10 @@
           required #email="ngModel">
         <div [hidden]="!email.pristine" class="alert alert-danger">OTP is required</div>
       </div>
-      <button type="submit" [disabled]="!userForm.form.valid" 
+
+      <button type="submit" [disabled]="!userForm.form.valid"
         class="btn btn-info">Validate OTP</button>
     </form>
+
   </div>
 </div>
